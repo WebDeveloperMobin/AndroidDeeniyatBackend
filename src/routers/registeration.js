@@ -15,6 +15,7 @@ router.post(`/${process.env.API}/register`, async (req, res) => {
     res.status(201).json({
       message: "Data inserted successfully!",
     });
+    res.send({message: "Data Save Sucessfully", data: data})
   } catch(error) {
     res.status(500).json({
       message: error,

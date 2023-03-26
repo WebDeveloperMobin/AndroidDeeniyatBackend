@@ -15,6 +15,10 @@ app.use(express.json());
 
 app.use("/", register);
 
+app.get("/", (req, res) => {
+  res.send({message: "Service is working!"})
+})
+
 app.listen(8080, () => {
   console.log(`Server is running in ${PORT}`);
 });
